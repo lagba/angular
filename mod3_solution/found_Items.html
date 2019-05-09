@@ -1,0 +1,11 @@
+<div style='clear: both;'>
+  <ul>
+    <li ng-repeat='item in list.found' style='margin-bottom: 10px; clear: both;'>
+      <span style='max-width: 85%; float: left;'>{{ item.name }}, {{ item.short_name }}, {{ item.description }}</span>
+      <button style='float: right;' ng-click='list.onRemove({index: $index})'>Don't want this one!</button>
+    </li>
+  </ul>
+  <div style="color: red;" ng-if='list.error'>
+    {{ list.error }}
+  </div>
+</div>
